@@ -1,0 +1,117 @@
+.members-list {
+  width: 100%;
+  background: linear-gradient(135deg, rgba(26, 31, 58, 0.7), rgba(45, 27, 78, 0.5));
+  border: 2px solid #0066ff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 102, 255, 0.15);
+}
+
+.members-table {
+  display: flex;
+  flex-direction: column;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1.5fr 1.5fr 1.5fr 1.5fr;
+  gap: 10px;
+  padding: 15px;
+  background: rgba(0, 102, 255, 0.15);
+  border-bottom: 2px solid #0066ff;
+  font-weight: 700;
+  color: #0066ff;
+  position: sticky;
+  top: 0;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1.5fr 1.5fr 1.5fr 1.5fr;
+  gap: 10px;
+  padding: 15px;
+  border-bottom: 1px solid #2a2f4a;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.table-row:hover {
+  background: rgba(0, 102, 255, 0.1);
+}
+
+.col {
+  color: #b0b0b0;
+  font-size: 13px;
+  word-break: break-word;
+}
+
+.col-name {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.col-email {
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+}
+
+.col-staticid {
+  font-family: 'Courier New', monospace;
+  font-weight: 600;
+  color: #0066ff;
+}
+
+.col-rank {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-badge {
+  border: 1px solid;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.table-empty {
+  padding: 40px;
+  text-align: center;
+  color: #b0b0b0;
+  font-size: 16px;
+}
+
+/* Scrollbar */
+.members-table::-webkit-scrollbar {
+  width: 8px;
+}
+
+.members-table::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.members-table::-webkit-scrollbar-thumb {
+  background: #0066ff;
+  border-radius: 4px;
+}
+
+.members-table::-webkit-scrollbar-thumb:hover {
+  background: #0052cc;
+}
+
+@media (max-width: 1200px) {
+  .table-header,
+  .table-row {
+    grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+  }
+
+  .col-email {
+    display: none;
+  }
+}
