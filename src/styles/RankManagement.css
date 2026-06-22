@@ -1,0 +1,181 @@
+.rank-management {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.rank-section {
+  background: linear-gradient(135deg, rgba(26, 31, 58, 0.7), rgba(45, 27, 78, 0.5));
+  border: 2px solid #0066ff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 8px 32px rgba(0, 102, 255, 0.15);
+}
+
+.rank-section h3 {
+  color: #0066ff;
+  margin-bottom: 20px;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.rank-update-form {
+  background: rgba(0, 102, 255, 0.05);
+  border: 1px solid #0066ff;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  color: #0066ff;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  background: rgba(10, 14, 39, 0.7);
+  border: 1px solid #2a2f4a;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 13px;
+  font-family: inherit;
+}
+
+.form-group select:focus {
+  outline: none;
+  border-color: #0066ff;
+  box-shadow: 0 0 10px rgba(0, 102, 255, 0.2);
+}
+
+.form-group select option {
+  background: #1a1f3a;
+  color: #ffffff;
+}
+
+.btn-update-rank {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #0066ff, #0052cc);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+}
+
+.btn-update-rank:hover:not(:disabled) {
+  box-shadow: 0 0 20px rgba(0, 102, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.btn-update-rank:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.ranks-list {
+  background: rgba(0, 102, 255, 0.05);
+  border: 1px solid #0066ff;
+  border-radius: 8px;
+  padding: 15px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.ranks-list h4 {
+  color: #0066ff;
+  margin-bottom: 12px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.rank-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: rgba(0, 102, 255, 0.08);
+  border-radius: 5px;
+  margin-bottom: 8px;
+  border-left: 3px solid #0066ff;
+}
+
+.member-info {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.current-rank {
+  color: #ffd700;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.ranks-info {
+  display: grid;
+  gap: 10px;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.rank-info-card {
+  background: rgba(0, 102, 255, 0.1);
+  border: 1px solid #0066ff;
+  border-radius: 8px;
+  padding: 12px;
+  transition: all 0.3s ease;
+}
+
+.rank-info-card:hover {
+  background: rgba(0, 102, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 102, 255, 0.2);
+}
+
+.rank-info-card h4 {
+  color: #0066ff;
+  margin-bottom: 6px;
+  font-size: 13px;
+}
+
+.rank-info-card p {
+  color: #b0b0b0;
+  font-size: 12px;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Scrollbars */
+.ranks-list::-webkit-scrollbar,
+.ranks-info::-webkit-scrollbar {
+  width: 6px;
+}
+
+.ranks-list::-webkit-scrollbar-thumb,
+.ranks-info::-webkit-scrollbar-thumb {
+  background: #0066ff;
+  border-radius: 3px;
+}
+
+@media (max-width: 1200px) {
+  .rank-management {
+    grid-template-columns: 1fr;
+  }
+}
