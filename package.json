@@ -1,0 +1,44 @@
+{
+  "name": "vortex-swat-manager",
+  "version": "1.0.0",
+  "description": "Desktop aplikācija SWAT komandas pārvaldībai",
+  "main": "main.js",
+  "homepage": "./",
+  "author": "Denis-Vortex",
+  "license": "MIT",
+  "scripts": {
+    "react-start": "react-scripts start",
+    "react-build": "react-scripts build",
+    "react-test": "react-scripts test",
+    "react-eject": "react-scripts eject",
+    "electron-start": "wait-on http://localhost:3000 && electron .",
+    "start": "concurrently \"npm run react-start\" \"wait-on http://localhost:3000 && electron .\"",
+    "build": "npm run react-build && electron-builder",
+    "dev": "concurrently \"npm run react-start\" \"wait-on http://localhost:3000 && electron . --dev\""
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "axios": "^1.4.0"
+  },
+  "devDependencies": {
+    "electron": "^latest",
+    "electron-builder": "^latest",
+    "concurrently": "^7.6.0",
+    "wait-on": "^7.0.1"
+  },
+  "build": {
+    "appId": "com.vortex.swatmanager",
+    "productName": "Vortex SWAT Manager",
+    "files": [
+      "build/**/*",
+      "node_modules/**/*",
+      "main.js",
+      "preload.js"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    }
+  }
+}
